@@ -9,7 +9,7 @@ namespace RFScout.Infrastructure.Linux
 {
     public class LinuxBlueZScanner : IDeviceScanner
     {
-        private int _minRssi;
+        private int _minRssi = -120;
 
         private event Action<DeviceSignal>? _deviceFound;
         private Connection _connection;
@@ -66,15 +66,15 @@ namespace RFScout.Infrastructure.Linux
             if (rssi < _minRssi)
                 return;
 
-            string address = props["Address"] as string ?? "";
-            string name = props.ContainsKey("Name") ? props["Name"] as string : "";
+            string address = props["Address"] as string ?? "Unknown Address";
+            string name = props.ContainsKey("Name") ? props["Name"] as string ?? "Unknown Address" : "Unknown Address";
 
             var signal = new DeviceSignal(
                 Address: address,
-                Name: name ?? "Uknown Device",
+                Name: name,
                 Rssi: rssi,
                 Type: SourceType.Bluetooth,
-                Timestamp: DateTime.UtcNow
+                Timestamp: DateTime.UtcNow  //TODO::this is wrong
             );
 
             _deviceFound?.Invoke(signal);
@@ -82,7 +82,7 @@ namespace RFScout.Infrastructure.Linux
 
 
         [DBusInterface("org.freedesktop.DBus.ObjectManager")]
-        interface IObjectManager : IDBusObject
+        public interface IObjectManager : IDBusObject
         {
             Task<IDictionary<ObjectPath, IDictionary<string, IDictionary<string, object>>>> GetManagedObjectsAsync();
 
@@ -91,7 +91,7 @@ namespace RFScout.Infrastructure.Linux
         }
 
         [DBusInterface("org.bluez.Adapter1")]
-        interface IAdapter1 : IDBusObject
+        public interface IAdapter1 : IDBusObject
         {
             Task StartDiscoveryAsync();
             Task StopDiscoveryAsync();
