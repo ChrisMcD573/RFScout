@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5396BD3C-3E3F-40C8-8A87-A7C726C237AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFScout.Console", "src\RFScout.Console\RFScout.Console.csproj", "{2EEE9244-5739-48AD-B4EB-8FE5984DF44D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7D5CC34F-E0A2-415D-ACCB-C8D477F259E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFScout.Tests", "tests\RFScout.Tests\RFScout.Tests.csproj", "{C3B36869-410E-473B-AE4D-F8099652ABA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFScout.Infrastructure", "src\RFScout.Infrastructure\RFScout.Infrastructure.csproj", "{3A0C452D-BC5C-4166-9CF4-75971731C6A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFScout.Core", "src\RFScout.Core\RFScout.Core.csproj", "{51A94EB0-2BB4-4CC3-8312-20286E5178AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFScout.Infrastructure.Linux", "src\RFScout.Infrastructure.Linux\RFScout.Infrastructure.Linux.csproj", "{791A1E31-400F-48FE-A7D1-312C92AED4B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFScout.Infrastructure.Windows", "src\RFScout.Infrastructure.Windows\RFScout.Infrastructure.Windows.csproj", "{DBBC122E-5AD0-4499-893C-6F3F8B69EF2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EEE9244-5739-48AD-B4EB-8FE5984DF44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEE9244-5739-48AD-B4EB-8FE5984DF44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEE9244-5739-48AD-B4EB-8FE5984DF44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEE9244-5739-48AD-B4EB-8FE5984DF44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B36869-410E-473B-AE4D-F8099652ABA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B36869-410E-473B-AE4D-F8099652ABA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B36869-410E-473B-AE4D-F8099652ABA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B36869-410E-473B-AE4D-F8099652ABA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0C452D-BC5C-4166-9CF4-75971731C6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0C452D-BC5C-4166-9CF4-75971731C6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0C452D-BC5C-4166-9CF4-75971731C6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0C452D-BC5C-4166-9CF4-75971731C6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A94EB0-2BB4-4CC3-8312-20286E5178AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A94EB0-2BB4-4CC3-8312-20286E5178AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A94EB0-2BB4-4CC3-8312-20286E5178AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A94EB0-2BB4-4CC3-8312-20286E5178AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{791A1E31-400F-48FE-A7D1-312C92AED4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{791A1E31-400F-48FE-A7D1-312C92AED4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{791A1E31-400F-48FE-A7D1-312C92AED4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{791A1E31-400F-48FE-A7D1-312C92AED4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBBC122E-5AD0-4499-893C-6F3F8B69EF2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBBC122E-5AD0-4499-893C-6F3F8B69EF2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBBC122E-5AD0-4499-893C-6F3F8B69EF2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBBC122E-5AD0-4499-893C-6F3F8B69EF2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EEE9244-5739-48AD-B4EB-8FE5984DF44D} = {5396BD3C-3E3F-40C8-8A87-A7C726C237AC}
+		{C3B36869-410E-473B-AE4D-F8099652ABA7} = {7D5CC34F-E0A2-415D-ACCB-C8D477F259E2}
+		{3A0C452D-BC5C-4166-9CF4-75971731C6A0} = {5396BD3C-3E3F-40C8-8A87-A7C726C237AC}
+		{51A94EB0-2BB4-4CC3-8312-20286E5178AA} = {5396BD3C-3E3F-40C8-8A87-A7C726C237AC}
+		{791A1E31-400F-48FE-A7D1-312C92AED4B8} = {5396BD3C-3E3F-40C8-8A87-A7C726C237AC}
+		{DBBC122E-5AD0-4499-893C-6F3F8B69EF2D} = {5396BD3C-3E3F-40C8-8A87-A7C726C237AC}
+	EndGlobalSection
+EndGlobal
