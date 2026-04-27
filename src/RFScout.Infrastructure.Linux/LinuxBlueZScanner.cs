@@ -32,6 +32,13 @@ namespace RFScout.Infrastructure.Linux
             var manager = _connection.CreateProxy<IObjectManager>("org.bluez", "/");
             _watcher = await manager.WatchInterfacesAddedAsync(HandleInterfacesAdded);
 
+            // NEW: Pull all devices BlueZ has already cached in the background
+            var managedObjects = await manager.GetManagedObjectsAsync();
+            foreach (var obj in managedObjects)
+            {
+                HandleInterfacesAdded((obj.Key, obj.Value));
+            }
+            
             var adapter = _connection.CreateProxy<IAdapter1>("org.bluez", "/org/bluez/hci0");
             await adapter.StartDiscoveryAsync();
 

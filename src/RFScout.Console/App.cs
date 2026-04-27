@@ -25,8 +25,15 @@ namespace RFScout.Console
             _logger = logger;
             _cache = deviceCache;
             _scanner = scanner;
-            _scanner.DeviceFound += signal => _cache.AddOrUpdateDevice(signal);
-
+            
+            _scanner.DeviceFound += signal => 
+            {
+                // NEW: Bypass the cache and print every raw signal directly to the console
+                _logger.LogInformation($"[RAW SIGNAL] {signal.Name} ({signal.Address}) | RSSI: {signal.Rssi}");
+                
+                _cache.AddOrUpdateDevice(signal);
+            };
+            
             _mediator = new ScanMediator(scanner, (DeviceCache)deviceCache);
         }
 
