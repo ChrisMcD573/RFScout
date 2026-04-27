@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RFScout.Caching;
-using RFScout.Scanning;
+using RFScout.Core.Caching;
+using RFScout.Infrastructure.Scanning;
 using Microsoft.Extensions.Logging;
 
-namespace RFScout
+namespace RFScout.Console
 {
     /// <summary>
     /// Main application class that orchestrates the device scanning and caching. It listens for device signals from the scanner and updates the cache accordingly, while periodically displaying the list of recently seen devices.

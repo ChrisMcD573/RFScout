@@ -5,7 +5,7 @@ using RFScout.Core.Domain;
 using RFScout.Infrastructure.Scanning;
 using Tmds.DBus;
 
-namespace RFScout.Infrastructure.Linux.Scanning
+namespace RFScout.Infrastructure.Linux
 {
     public class LinuxBlueZScanner : IDeviceScanner
     {
